@@ -55,6 +55,7 @@
     <Compile Include="Enum\EnumStatusJogador.cs" />
     <Compile Include="Interfaces\Dto\IResponse.cs" />
     <Compile Include="Interfaces\Dto\IRequest.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryJogador.cs" />
     <Compile Include="Interfaces\Services\IServiceJogador.cs" />
     <Compile Include="Interfaces\Services\IServicePlataforma.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,9 +63,7 @@
     <Compile Include="ValueObjects\Email.cs" />
     <Compile Include="ValueObjects\Nome.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Diagrama\ClassDiagram1.cd" />
   </ItemGroup>
