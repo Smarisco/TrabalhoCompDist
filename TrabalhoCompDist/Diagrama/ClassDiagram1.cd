@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TrabalhoCompDist.Entities.ControleDeJogos">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAAAAAAAAAEAAAAAABAAQAAAAAAAAQ=</HashCode>
+      <FileName>Entities\ControleDeJogos.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="JogoPlataforma" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TrabalhoCompDist.Entities.Jogador">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEACAAAAAAAAAAAAAAACAAAAAAAAAgAAACAAA=</HashCode>
+      <FileName>Entities\Jogador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrabalhoCompDist.Entities.JogoDaPlataforma">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Entities\JogoDaPlataforma.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Jogos" />
+      <Property Name="Plataforma" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TrabalhoCompDist.Entities.Jogos">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQSAAAAAAAAgAAAAAAAAAIAAAAAQAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Entities\Jogos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrabalhoCompDist.Entities.Plataforma">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Plataforma.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
