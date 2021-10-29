@@ -44,9 +44,9 @@ namespace TrabalhoCompDist.Services
                 AddNotification("Autenticar Jogador ", string.Format(Mensagens.X0_E_OBRIGATORIO, "Autenticar Jogador "));
             }
 
-            var email = new Email("paulo@email");
+            var email = new Email(request.Email);
 
-            var jogador = new Jogador(email,"123");
+            var jogador = new Jogador(email,request.Senha);
 
             AddNotifications(jogador,email);
 
@@ -55,7 +55,7 @@ namespace TrabalhoCompDist.Services
                 return null;
             }
 
-            var response = _repositoryJogador.AutenticarJogador(request);
+            var response = _repositoryJogador.AutenticarJogador(jogador.Email.Endereco,jogador.Senha);
 
             return response;
 

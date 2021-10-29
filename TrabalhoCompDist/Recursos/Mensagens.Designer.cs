@@ -61,11 +61,29 @@ namespace TrabalhoCompDist.Recursos {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatório.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatório..
         /// </summary>
         public static string X0_E_OBRIGATORIO {
             get {
                 return ResourceManager.GetString("X0_E_OBRIGATORIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} invalida..
+        /// </summary>
+        public static string X0_INVALIDA {
+            get {
+                return ResourceManager.GetString("X0_INVALIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0}  invalido..
+        /// </summary>
+        public static string X0_INVALIDO {
+            get {
+                return ResourceManager.GetString("X0_INVALIDO", resourceCulture);
             }
         }
     }
