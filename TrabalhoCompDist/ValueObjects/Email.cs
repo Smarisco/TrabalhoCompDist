@@ -1,7 +1,14 @@
-﻿namespace TrabalhoCompDist.ValueObjects
+﻿using prmToolkit.NotificationPattern;
+
+namespace TrabalhoCompDist.ValueObjects
 {
-    public class Email
+    public class Email:Notifiable
     {
-        public string Endereco { get; set; }
+        public Email(string endereco)
+        {
+            Endereco = endereco;
+            new AddNotifications<Email>(this).IfNotEmail(x => x.Endereco);
+        }
+        public string Endereco { get; private set; }
     }
 }
