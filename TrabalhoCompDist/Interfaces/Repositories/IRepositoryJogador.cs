@@ -1,12 +1,12 @@
-﻿using System;
-using TrabalhoCompDist.Arguments.Jogador;
+﻿using System.Collections.Generic;
 using TrabalhoCompDist.Entities;
 
 namespace TrabalhoCompDist.Interfaces.Repositories
 {
     public interface IRepositoryJogador
     {
-        AutenticarJogadorResponse AutenticarJogador(string email, string senha);
-        Guid AdicionarJogador(Jogador jogador);
+        Jogador AutenticarJogador(string email, string senha);
+        Jogador AdicionarJogador(Jogador jogador);
+        IEnumerable<Jogador> ListarJogador();
     }
 }

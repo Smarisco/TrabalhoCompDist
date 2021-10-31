@@ -1,4 +1,5 @@
-﻿using TrabalhoCompDist.Arguments.Jogador;
+﻿using System.Collections.Generic;
+using TrabalhoCompDist.Arguments.Jogador;
 
 namespace TrabalhoCompDist.Interfaces.Services
 {
@@ -6,5 +7,7 @@ namespace TrabalhoCompDist.Interfaces.Services
     {
         AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request);
         AdicionarJogadorResponse AdicionarJogador(AdicionaJogadorRequest request);
+        AlterarJogadorResponse AlterarJogador(AlterarJogadorRequest request);
+        IEnumerable<JogadorResponse> ListarJogador();
     }
 }

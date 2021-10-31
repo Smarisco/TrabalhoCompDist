@@ -6,6 +6,8 @@ using TrabalhoCompDist.Interfaces.Services;
 using TrabalhoCompDist.ValueObjects;
 using prmToolkit.NotificationPattern;
 using TrabalhoCompDist.Recursos;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TrabalhoCompDist.Services
 {
@@ -24,15 +26,25 @@ namespace TrabalhoCompDist.Services
         }
         public AdicionarJogadorResponse AdicionarJogador(AdicionaJogadorRequest request)
         {
-            var nome = new Nome(request.PrimeiroNome,request.UltimoNome);
+            var nome = new Nome(request.PrimeiroNome, request.UltimoNome);
 
             var email = new Email(request.Email);
-            
-            Jogador jogador = new Jogador(nome, email,request.Senha);
 
-            Guid id = _repositoryJogador.AdicionarJogador(jogador);
+            Jogador jogador = new Jogador(nome, email, request.Senha);
 
-            return new AdicionarJogadorResponse() { Id = id, Mensagem = "Operação realizada com sucesso" };
+            if (jogador.IsInvalid())
+            {
+                return null;
+            }
+
+          jogador = _repositoryJogador.AdicionarJogador(jogador);
+
+            return (AdicionarJogadorResponse)jogador;
+        }
+
+        public AlterarJogadorResponse AlterarJogador(AlterarJogadorRequest request)
+        {
+            throw new NotImplementedException();
         }
 
         public AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request)
@@ -53,15 +65,16 @@ namespace TrabalhoCompDist.Services
                 return null;
             }
 
-            var response = _repositoryJogador.AutenticarJogador(jogador.Email.Endereco, jogador.Senha);
+            jogador = _repositoryJogador.AutenticarJogador(jogador.Email.Endereco, jogador.Senha);
 
-            return response;
+            return (AutenticarJogadorResponse)jogador;
 
         }
 
-        private bool IsEmail(string email)
+        public IEnumerable<JogadorResponse> ListarJogador()
         {
-            return false;
+            return _repositoryJogador.ListarJogador().ToList().Select(jogador=>(JogadorResponse)jogador).ToList();
         }
+       
     }
 }

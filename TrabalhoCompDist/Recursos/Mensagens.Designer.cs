@@ -115,6 +115,15 @@ namespace TrabalhoCompDist.Recursos {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Operação realizada com sucesso..
+        /// </summary>
+        public static string OPERACAO_REALIZADA_COM_SUCESSO {
+            get {
+                return ResourceManager.GetString("OPERACAO_REALIZADA_COM_SUCESSO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatório..
         /// </summary>
         public static string X0_E_OBRIGATORIO {

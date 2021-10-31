@@ -25,19 +25,30 @@ namespace TrabalhoCompDist.Entities
             Nome = nome;
             Email = email;
             Senha = senha;
+            Id = Guid.NewGuid();
+            Status = EnumStatusJogador.EmAnalise;
 
             new AddNotifications<Jogador>(this)
-                .IfNullOrInvalidLength(x => x.Senha, 6,12);
-
-            Senha = Senha.ConvertToMD5();
+                .IfNullOrInvalidLength(x => x.Senha, 6, 12);
+           
+            if (IsValid())
+            {
+                Senha = Senha.ConvertToMD5();
+            }
 
             AddNotifications(nome, email);
         }
 
-        public Guid Id { get; private set; }
-        public Nome Nome { get; private set; }
-        public Email Email { get; private set; }
-        public string Senha { get; private set; }
-        public EnumStatusJogador Status { get; private set; }
+        public Guid Id { get;  set; }
+        public Nome Nome { get;  set; }
+        public Email Email { get;  set; }
+        public string Senha { get;  set; }
+        public EnumStatusJogador Status { get;  set; }
+
+        public override string ToString()
+        {
+            return this.Nome.PrimeiroNome + " " + this.Nome.UltimoNome;
+        }
+
     }
 }
