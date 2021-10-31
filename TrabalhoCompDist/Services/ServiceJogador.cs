@@ -5,9 +5,11 @@ using TrabalhoCompDist.Interfaces.Repositories;
 using TrabalhoCompDist.Interfaces.Services;
 using TrabalhoCompDist.ValueObjects;
 using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
 using TrabalhoCompDist.Recursos;
 using System.Collections.Generic;
 using System.Linq;
+using prmToolkit.NotificationPattern.Resources;
 
 namespace TrabalhoCompDist.Services
 {
@@ -37,25 +39,52 @@ namespace TrabalhoCompDist.Services
                 return null;
             }
 
-          jogador = _repositoryJogador.AdicionarJogador(jogador);
+            jogador = _repositoryJogador.AdicionarJogador(jogador);
 
             return (AdicionarJogadorResponse)jogador;
         }
 
         public AlterarJogadorResponse AlterarJogador(AlterarJogadorRequest request)
         {
-            throw new NotImplementedException();
+            if (request == null)
+            {
+                AddNotification("AlterarJogador", Mensagens.X0_E_OBRIGATORIO.ToFormat("Campo"));
+            }
+
+            //trazer informações do banco de dados
+            Jogador jogador = _repositoryJogador.ObterJogadorPorId(request.Id);
+            if (jogador == null)
+            {
+                AddNotification("Id", Mensagens.DADOS_NAO_ENCONTRADOS);
+                return null;
+            }
+
+            var nome = new Nome(request.PrimeiroNome, request.UltimoNome);
+            var email = new Email(request.Email);
+            
+            jogador.AlterarJogador(nome, email, jogador.Status);
+                                    
+            AddNotifications(jogador);
+
+            if (IsInvalid())
+            {
+                return null;
+            }
+
+             _repositoryJogador.AlterarJogador(jogador);
+            
+            return (AlterarJogadorResponse)jogador;
         }
+
 
         public AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request)
         {
             if (request == null)
             {
-                AddNotification("Autenticar Jogador ", string.Format(Mensagens.X0_E_OBRIGATORIO, "Autenticar Jogador "));
+                AddNotification("AutenticarJogador", Mensagens.X0_E_OBRIGATORIO.ToFormat(" "));
             }
 
             var email = new Email(request.Email);
-
             var jogador = new Jogador(email, request.Senha);
 
             AddNotifications(jogador, email);
@@ -65,16 +94,17 @@ namespace TrabalhoCompDist.Services
                 return null;
             }
 
-            jogador = _repositoryJogador.AutenticarJogador(jogador.Email.Endereco, jogador.Senha);
+            jogador = _repositoryJogador.ObterPor(x => x.Email.Endereco == jogador.Email.Endereco && x.Senha == jogador.Senha);
 
             return (AutenticarJogadorResponse)jogador;
 
         }
-
         public IEnumerable<JogadorResponse> ListarJogador()
         {
-            return _repositoryJogador.ListarJogador().ToList().Select(jogador=>(JogadorResponse)jogador).ToList();
+            return _repositoryJogador.ListarJogador().ToList().Select(jogador => (JogadorResponse)jogador).ToList();
         }
-       
+
     }
 }
+
+

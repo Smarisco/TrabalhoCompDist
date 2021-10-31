@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using TrabalhoCompDist.Arguments.Jogador;
 
+
 namespace TrabalhoCompDist.Interfaces.Services
 {
     public interface IServiceJogador

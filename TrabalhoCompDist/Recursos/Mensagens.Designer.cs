@@ -106,6 +106,15 @@ namespace TrabalhoCompDist.Recursos {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O cadastro não esta ativo..
+        /// </summary>
+        public static string JOGADOR__NAO_ATIVO {
+            get {
+                return ResourceManager.GetString("JOGADOR__NAO_ATIVO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Não é possível excluir uma {0} associada a uma {1}..
         /// </summary>
         public static string NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UMA_X1 {
@@ -124,7 +133,7 @@ namespace TrabalhoCompDist.Recursos {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatório..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Campo é obrigatório..
         /// </summary>
         public static string X0_E_OBRIGATORIO {
             get {

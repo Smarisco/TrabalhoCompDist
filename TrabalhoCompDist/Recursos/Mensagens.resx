@@ -132,6 +132,9 @@
   <data name="JA_EXISTE_UMA_X0_COM_O_X1_X2" xml:space="preserve">
     <value>Já existe uma {0} com o {1} {2}</value>
   </data>
+  <data name="JOGADOR__NAO_ATIVO" xml:space="preserve">
+    <value>O cadastro não esta ativo.</value>
+  </data>
   <data name="NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UMA_X1" xml:space="preserve">
     <value>Não é possível excluir uma {0} associada a uma {1}.</value>
   </data>
@@ -139,7 +142,7 @@
     <value>Operação realizada com sucesso.</value>
   </data>
   <data name="X0_E_OBRIGATORIO" xml:space="preserve">
-    <value>{0} é obrigatório.</value>
+    <value>Campo é obrigatório.</value>
   </data>
   <data name="X0_E_OBRIGATORIO_CONTER_X_CARACTERES" xml:space="preserve">
     <value>Numero de caracteres inválido.</value>
