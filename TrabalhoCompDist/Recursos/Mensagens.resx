@@ -117,8 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1" xml:space="preserve">
+    <value>{0} deve ser maior ou igual a {1}.</value>
+  </data>
+  <data name="DADOS_NAO_ENCONTRADOS" xml:space="preserve">
+    <value>Dados não encontrados.</value>
+  </data>
+  <data name="JA_EXISTE_UMA_X0_CHAMADA_X1" xml:space="preserve">
+    <value>Já existe uma {0} chamada {1}.</value>
+  </data>
+  <data name="JA_EXISTE_UMA_X0_COM_A_X1_X2" xml:space="preserve">
+    <value>Já existe uma {0} com a {1} {2}</value>
+  </data>
+  <data name="JA_EXISTE_UMA_X0_COM_O_X1_X2" xml:space="preserve">
+    <value>Já existe uma {0} com o {1} {2}</value>
+  </data>
+  <data name="NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UMA_X1" xml:space="preserve">
+    <value>Não é possível excluir uma {0} associada a uma {1}.</value>
+  </data>
   <data name="X0_E_OBRIGATORIO" xml:space="preserve">
     <value>{0} é obrigatório.</value>
+  </data>
+  <data name="X0_E_OBRIGATORIO_CONTER_X_CARACTERES" xml:space="preserve">
+    <value>Numero de caracteres inválido.</value>
   </data>
   <data name="X0_INVALIDA" xml:space="preserve">
     <value>{0} invalida.</value>

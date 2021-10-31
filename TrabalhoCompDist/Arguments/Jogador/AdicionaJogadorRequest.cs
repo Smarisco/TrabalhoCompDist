@@ -3,10 +3,12 @@ using TrabalhoCompDist.ValueObjects;
 
 namespace TrabalhoCompDist.Arguments.Jogador
 {
-    public class AdicionaJogadorRequest:IRequest
+    public class AdicionaJogadorRequest : IRequest
     {
-        public Nome Nome { get; set; }
-        public Email Email { get; set; }
-        public string Senha { get; private set; }
+        public string Email { get; set; }
+        public string Senha { get;  set; }
+        public string PrimeiroNome { get;  set; }
+        public string UltimoNome { get;  set; }
+
     }
 }

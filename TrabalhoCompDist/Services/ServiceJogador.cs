@@ -24,13 +24,11 @@ namespace TrabalhoCompDist.Services
         }
         public AdicionarJogadorResponse AdicionarJogador(AdicionaJogadorRequest request)
         {
-            Jogador jogador = new Jogador();
+            var nome = new Nome(request.PrimeiroNome,request.UltimoNome);
 
-            jogador.Email = request.Email;
-
-            jogador.Nome = request.Nome;
-
-            jogador.Status = Enum.EnumStatusJogador.EmAndamento;
+            var email = new Email(request.Email);
+            
+            Jogador jogador = new Jogador(nome, email,request.Senha);
 
             Guid id = _repositoryJogador.AdicionarJogador(jogador);
 
@@ -46,16 +44,16 @@ namespace TrabalhoCompDist.Services
 
             var email = new Email(request.Email);
 
-            var jogador = new Jogador(email,request.Senha);
+            var jogador = new Jogador(email, request.Senha);
 
-            AddNotifications(jogador,email);
+            AddNotifications(jogador, email);
 
             if (jogador.IsInvalid())
             {
                 return null;
             }
 
-            var response = _repositoryJogador.AutenticarJogador(jogador.Email.Endereco,jogador.Senha);
+            var response = _repositoryJogador.AutenticarJogador(jogador.Email.Endereco, jogador.Senha);
 
             return response;
 

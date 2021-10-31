@@ -61,11 +61,74 @@ namespace TrabalhoCompDist.Recursos {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} deve ser maior ou igual a {1}..
+        /// </summary>
+        public static string A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1 {
+            get {
+                return ResourceManager.GetString("A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Dados não encontrados..
+        /// </summary>
+        public static string DADOS_NAO_ENCONTRADOS {
+            get {
+                return ResourceManager.GetString("DADOS_NAO_ENCONTRADOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Já existe uma {0} chamada {1}..
+        /// </summary>
+        public static string JA_EXISTE_UMA_X0_CHAMADA_X1 {
+            get {
+                return ResourceManager.GetString("JA_EXISTE_UMA_X0_CHAMADA_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Já existe uma {0} com a {1} {2}.
+        /// </summary>
+        public static string JA_EXISTE_UMA_X0_COM_A_X1_X2 {
+            get {
+                return ResourceManager.GetString("JA_EXISTE_UMA_X0_COM_A_X1_X2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Já existe uma {0} com o {1} {2}.
+        /// </summary>
+        public static string JA_EXISTE_UMA_X0_COM_O_X1_X2 {
+            get {
+                return ResourceManager.GetString("JA_EXISTE_UMA_X0_COM_O_X1_X2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não é possível excluir uma {0} associada a uma {1}..
+        /// </summary>
+        public static string NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UMA_X1 {
+            get {
+                return ResourceManager.GetString("NAO_E_POSSIVEL_EXCLUIR_UMA_X0_ASSOCIADA_A_UMA_X1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatório..
         /// </summary>
         public static string X0_E_OBRIGATORIO {
             get {
                 return ResourceManager.GetString("X0_E_OBRIGATORIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Numero de caracteres inválido..
+        /// </summary>
+        public static string X0_E_OBRIGATORIO_CONTER_X_CARACTERES {
+            get {
+                return ResourceManager.GetString("X0_E_OBRIGATORIO_CONTER_X_CARACTERES", resourceCulture);
             }
         }
         
