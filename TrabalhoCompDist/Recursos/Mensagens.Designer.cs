@@ -106,7 +106,7 @@ namespace TrabalhoCompDist.Recursos {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a O cadastro não esta ativo..
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Só é possivel alterar Jogador ativo..
         /// </summary>
         public static string JOGADOR__NAO_ATIVO {
             get {
