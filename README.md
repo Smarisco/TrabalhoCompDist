@@ -31,3 +31,9 @@ Pacotes a serem instalados:
 Unity;
 EntityFramework;
 prmToolkit.NotificationPattern (para validação de menssagens);
+Microsoft.AspNer.WebApi.Owin;
+Microsoft.Owin.Host.System.Web;
+Microsoft.Owin.Security.OAuth (para criar token);
+Microsoft.Owin.Cors (Permissão de Acesso);
+
+
