@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Api.Controller.Base;
+using Infra.Transacao;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using TrabalhoCompDist.Interfaces.Services;
 using TrabalhoCompDist.Arguments.Jogador;
-using Api.Controller.Base;
-using Infra.Transacao;
+using TrabalhoCompDist.Interfaces.Services;
 
 namespace Api.Controller
-{ 
+{
     [RoutePrefix("api/jogador")]
     public class JogadorController : ControllerBase
     {       
@@ -21,7 +21,7 @@ namespace Api.Controller
 
         [Route("Adicionar")]
         [HttpPost]
-        public async Task<HttpResponseMessage> Adicionar(AdicionarJogadorRequest request)
+        public async Task<HttpResponseMessage> Adicionar(AdicionaJogadorRequest request)
         {
             try
             {

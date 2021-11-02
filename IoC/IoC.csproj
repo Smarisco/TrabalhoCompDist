@@ -224,6 +224,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Infra\Infra.csproj">
+      <Project>{802E98FA-ECD1-4EBD-9C56-3E2577C99935}</Project>
+      <Name>Infra</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TrabalhoCompDist\TrabalhoCompDist.csproj">
       <Project>{BB113968-0F68-4694-9D32-830290CC1323}</Project>
       <Name>TrabalhoCompDist</Name>

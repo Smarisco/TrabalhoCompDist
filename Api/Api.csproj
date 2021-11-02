@@ -389,6 +389,7 @@
   <ItemGroup>
     <Compile Include="Controller\Base\ControllerBase.cs" />
     <Compile Include="Controller\JogadorController.cs" />
+    <Compile Include="Controller\JogoController.cs" />
     <Compile Include="Iniciar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\Autorizacao.cs" />
