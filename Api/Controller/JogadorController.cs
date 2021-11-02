@@ -1,51 +1,53 @@
 ﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using TrabalhoCompDist.Interfaces.Services;
+using TrabalhoCompDist.Arguments.Jogador;
+using Api.Controller.Base;
 
 namespace Api.Controller
-{
-    public class JogadorController
-    {
-        [RoutePrefix("api/jogador")]
-        public class JogadorController : ApiController
+{ 
+    [RoutePrefix("api/jogador")]
+    public class JogadorController : ControllerBase
+    {       
+        private readonly IServiceJogador _serviceJogador;
+
+        public JogadorController(IUnityTrabalho unityTrabalho, IServiceJogador serviceJogador) : base(unityTrabalho)
         {
-            private readonly IServiceJogador _serviceJogador;
+            _serviceJogador = serviceJogador;
+        }
 
-            public JogadorController(IUnityTrabalho unityTrabalho, IServiceJogador serviceJogador) : base(unityTrabalho)
+        [Route("Adicionar")]
+        [HttpPost]
+        public async Task<HttpResponseMessage> Adicionar(AdicionarJogadorRequest request)
+        {
+            try
             {
-                _serviceJogador = serviceJogador;
+                var response = _serviceJogador.AdicionarJogador(request);
+
+                return await ResponseAsync(response, _serviceJogador);
             }
-
-            [Route("Adicionar")]
-            [HttpPost]
-            public async Task<HttpResponseMessage> Adicionar(AdicionarJogadorRequest request)
+            catch (Exception ex)
             {
-                try
-                {
-                    var response = _serviceJogador.AdicionarJogador(request);
-
-                    return await ResponseAsync(response, _serviceJogador);
-                }
-                catch (Exception ex)
-                {
-                    return await ResponseExceptionAsync(ex);
-                }
-            }
-
-            [Route("Listar")]
-            [HttpGet]
-            public async Task<HttpResponseMessage> Listar()
-            {
-                try
-                {
-                    var response = _serviceJogador.ListarJogador();
-
-                    return await ResponseAsync(response, _serviceJogador);
-                }
-                catch (Exception ex)
-                {
-                    return await ResponseExceptionAsync(ex);
-                }
+                return await ResponseExceptionAsync(ex);
             }
         }
+
+        [Route("Listar")]
+        [HttpGet]
+        public async Task<HttpResponseMessage> Listar()
+        {
+            try
+            {
+                var response = _serviceJogador.ListarJogador();
+
+                return await ResponseAsync(response, _serviceJogador);
+            }
+            catch (Exception ex)
+            {
+                return await ResponseExceptionAsync(ex);
+            }
+        }
+    }
 }
