@@ -6,7 +6,7 @@ namespace TrabalhoCompDist.Entities
     {
         public Guid Id { get; set; }
         public string NomeJogo { get; set; }
-        public string DescriçãoJogo { get; set; }
+        public string DescricaoJogo { get; set; }
         public string Produtora { get; set; }
         public string Distribuidora { get; set; }
         public string Genero { get; set; }
