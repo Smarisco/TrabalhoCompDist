@@ -1,7 +1,5 @@
-﻿using Microsoft.Practices.Unity;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Web.Http.Dependencies;
 using Unity;
 
 namespace InversaoDeControle.Unity
@@ -44,11 +42,11 @@ namespace InversaoDeControle.Unity
             }
         }
 
-        public IDependencyScope BeginScope()
-        {
-            var child = container.CreateChildContainer();
-            return new Resolver(child);
-        }
+        //public IDependencyScope BeginScope()
+        //{
+        //    var child = container.CreateChildContainer();
+        //    return new Resolver(child);
+        //}
 
         public void Dispose()
         {
