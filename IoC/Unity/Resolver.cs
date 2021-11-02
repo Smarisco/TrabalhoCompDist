@@ -5,7 +5,7 @@ using Unity;
 
 namespace InversaoDeControle.Unity
 {
-    class Resolver : IDependencyResolver
+    public class Resolver : IDependencyResolver
     {
         protected IUnityContainer container;
 

@@ -26,7 +26,7 @@ namespace Api
             // Configure Injeção de dependência
             var container = new UnityContainer();
             DependenciaResolver.Resolve(container);
-            config.DependencyResolver = new DependenciaResolver(container);
+            config.DependencyResolver = new Resolver(container);
 
             ConfigureWebApi(config);
             ConfigureOAuth(app, container);

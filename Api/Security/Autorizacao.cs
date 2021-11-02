@@ -21,12 +21,13 @@ namespace Api.Security
             _container = container;
         }
 
-        public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
+        public override Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
             context.Validated();
+            return Task.CompletedTask;
         }
 
-        public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
+        public override Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
             try
             {
@@ -46,7 +47,7 @@ namespace Api.Security
                     if (response == null)
                     {
                         context.SetError("invalid_grant", "Preencha um e-mail válido e uma senha com pelo menos 6 caracteres.");
-                        return;
+                        return Task.CompletedTask;
                     }
                 }
 
@@ -55,7 +56,7 @@ namespace Api.Security
                 if (response == null)
                 {
                     context.SetError("invalid_grant", "Jogador não encontrado!");
-                    return;
+                    return Task.CompletedTask;
                 }
 
                 var identity = new ClaimsIdentity(context.Options.AuthenticationType);
@@ -72,8 +73,10 @@ namespace Api.Security
             catch (Exception ex)
             {
                 context.SetError("invalid_grant", ex.Message);
-                return;
+                return Task.CompletedTask;
             }
+
+            return Task.CompletedTask;
         }
     }
 }
