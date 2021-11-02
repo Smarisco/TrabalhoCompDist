@@ -50,10 +50,10 @@ namespace TrabalhoCompDist.Entities
             AddNotifications(nome, email);
         }
 
-        public Guid Id { get; set; }
-        public Nome Nome { get; set; }
-        public Email Email { get; set; }
-        public string Senha { get; set; }
+        public Guid Id { get; private set; }
+        public Nome Nome { get; private set; }
+        public Email Email { get; private set; }
+        public string Senha { get; private set; }
         public EnumStatusJogador Status { get; set; }
 
         public override string ToString()
