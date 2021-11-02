@@ -1,15 +1,7 @@
-﻿using Infraestrutura.Persistencia;
-using Infraestrutura.Persistencia.Repositorio;
-using Infraestrutura.Persistencia.Repositorio.Base;
-using Infraestrutura.Transacao;
-using prmToolkit.NotificationPattern;
-using System.Data.Entity;
-using TrabalhoCompDist.Interfaces.Repositories;
-using TrabalhoCompDist.Interfaces.Repositories.Base;
-using TrabalhoCompDist.Interfaces.Services;
-using TrabalhoCompDist.Services;
+﻿using System.Data.Entity;
 using Unity;
 using Unity.Lifetime;
+using Infraestrutura.Transacao;
 
 namespace InversaoDeControle.Unity
 {

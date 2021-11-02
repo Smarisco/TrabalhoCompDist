@@ -9,6 +9,7 @@ using System;
 using System.Net.Http.Extensions.Compression.Core.Compressors;
 using System.Web.Http;
 using Unity;
+using Api.Security;
 
 namespace Api
 {
@@ -76,7 +77,7 @@ namespace Api
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromHours(2),
-                Provider = new AuthorizationProvider(container)
+                Provider = new Autorizacao(container)
             };
 
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
