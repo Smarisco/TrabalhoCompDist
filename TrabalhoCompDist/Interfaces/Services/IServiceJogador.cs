@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using TrabalhoCompDist.Arguments.Base;
 using TrabalhoCompDist.Arguments.Jogador;
 
 
@@ -10,5 +12,6 @@ namespace TrabalhoCompDist.Interfaces.Services
         AdicionarJogadorResponse AdicionarJogador(AdicionaJogadorRequest request);
         AlterarJogadorResponse AlterarJogador(AlterarJogadorRequest request);
         IEnumerable<JogadorResponse> ListarJogador();
+        ResponseBase ExcluirJogador(Guid id);
     }
 }

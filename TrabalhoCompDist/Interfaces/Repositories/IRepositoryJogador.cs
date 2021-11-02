@@ -7,7 +7,6 @@ namespace TrabalhoCompDist.Interfaces.Repositories
 {
     public interface IRepositoryJogador : IRepositoryBase<Jogador, Guid>
     {
-        Jogador AutenticarJogador(string email, string senha);
-
+       
     }
 }

@@ -10,6 +10,7 @@ using TrabalhoCompDist.Recursos;
 using System.Collections.Generic;
 using System.Linq;
 using prmToolkit.NotificationPattern.Resources;
+using TrabalhoCompDist.Arguments.Base;
 
 namespace TrabalhoCompDist.Services
 {
@@ -61,16 +62,16 @@ namespace TrabalhoCompDist.Services
 
             var nome = new Nome(request.PrimeiroNome, request.UltimoNome);
             var email = new Email(request.Email);
-            
+
             jogador.AlterarJogador(nome, email, jogador.Status);
-                                    
+
             AddNotifications(jogador);
 
             if (IsInvalid())
             {
                 return null;
             }
-                     
+
             return (AlterarJogadorResponse)jogador;
         }
 
@@ -97,11 +98,25 @@ namespace TrabalhoCompDist.Services
             return (AutenticarJogadorResponse)jogador;
 
         }
+
         public IEnumerable<JogadorResponse> ListarJogador()
         {
             return _repositoryJogador.Listar().Select(jogador => (JogadorResponse)jogador).ToList();
         }
 
+        public ResponseBase ExcluirJogador(Guid id)
+        {
+            Jogador jogador = _repositoryJogador.ObterPorId(id);
+            if (jogador == null)
+            {
+                AddNotification("Id", Mensagens.DADOS_NAO_ENCONTRADOS);
+                return null;
+            }
+            _repositoryJogador.Remover(jogador);
+
+            return new ResponseBase();
+
+        }
     }
 }
 

@@ -5,14 +5,14 @@ using TrabalhoCompDist.Interfaces.Repositories;
 
 namespace Infraestrutura.Persistencia.Repositorio
 {
-    public class RepositoryJogador: RepositoryBase<Jogador,Guid>, IRepositoryJogador
+    public class RepositoryJogo : RepositoryBase<Jogador, Guid>, IRepositoryJogador
     {
         protected readonly Contexto _context;
 
-        public RepositoryJogador(Contexto context):base(context)
+        public RepositoryJogo(Contexto context) : base(context)
         {
             _context = context;
-        }      
+        }
 
     }
 }
