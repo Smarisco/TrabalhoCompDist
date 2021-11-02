@@ -1,9 +1,14 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TrabalhoCompDist.Entities;
 
 namespace Infra.Persistencia.Mapping
 {
-    class MappingJogador : EntityTypeConfiguration<Jogador>
+    public class MappingJogador : EntityTypeConfiguration<Jogador>
     {
         public MappingJogador()
         {
@@ -19,7 +24,7 @@ namespace Infra.Persistencia.Mapping
             Property(p => p.Nome.UltimoNome)
                  .HasMaxLength(256)
                  .IsRequired()
-                 .HasColumnName("UltimoNome"); 
+                 .HasColumnName("UltimoNome");
             Property(p => p.Senha)
                  .IsRequired();
             Property(p => p.Status)
@@ -28,5 +33,3 @@ namespace Infra.Persistencia.Mapping
         }
     }
 }
-
-

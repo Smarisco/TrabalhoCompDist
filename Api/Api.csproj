@@ -407,6 +407,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Infra\Infra.csproj">
+      <Project>{802e98fa-ecd1-4ebd-9c56-3e2577c99935}</Project>
+      <Name>Infra</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IoC\IoC.csproj">
       <Project>{E977E0DF-6EAC-4B40-B6B7-079FE6327E3C}</Project>
       <Name>IoC</Name>

@@ -19,15 +19,13 @@ namespace Infra.Persistencia.Mapping
             Property(p => p.Produtora)
                      .HasMaxLength(256)
                      .IsRequired();
-                     
+
             Property(p => p.Genero)
                      .IsRequired();
 
             Property(p => p.Site)
                 .HasMaxLength(256);
-                     
+
         }
     }
-        
 }
-

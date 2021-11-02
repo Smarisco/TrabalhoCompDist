@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
 using TrabalhoCompDist.Entities.Base;
 using TrabalhoCompDist.Interfaces.Repositories.Base;
 
-namespace Infraestrutura.Persistencia.Repositorio.Base
+namespace Infra.Repositorio.Base
 {
-    public class RepositoryBase<TEntidade, TId> : IRepositoryBase<TEntidade, TId>
+    class RepositoryBase<TEntidade, TId> : IRepositoryBase<TEntidade, TId>
        where TEntidade : EntidadeBase
        where TId : struct
     {

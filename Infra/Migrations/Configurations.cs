@@ -1,18 +1,15 @@
-﻿namespace Infraestrutura.Migrations
+﻿namespace Infra.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Infraestrutura.Persistencia.Contexto>
+    internal sealed class Configurations : DbMigrationsConfiguration<Infra.Contexto>
     {
-        public Configuration()
+        public Configurations()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Infraestrutura.Persistencia.Contexto context)
+        protected override void Seed(Infra.Contexto context)
         {
             //  This method will be called after migrating to the latest version.
 

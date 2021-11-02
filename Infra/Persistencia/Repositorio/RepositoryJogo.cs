@@ -1,9 +1,9 @@
-﻿using Infraestrutura.Persistencia.Repositorio.Base;
+﻿using Infra.Repositorio.Base;
 using System;
 using TrabalhoCompDist.Entities;
 using TrabalhoCompDist.Interfaces.Repositories;
 
-namespace Infraestrutura.Persistencia.Repositorio
+namespace Infra.Persistencia.Repositorio
 {
     public class RepositoryJogo : RepositoryBase<Jogador, Guid>, IRepositoryJogador
     {

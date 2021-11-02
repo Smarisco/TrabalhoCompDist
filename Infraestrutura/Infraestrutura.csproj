@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AppConsole\AppConsole.csproj" />
     <ProjectReference Include="..\TrabalhoCompDist\TrabalhoCompDist.csproj" />
   </ItemGroup>
 

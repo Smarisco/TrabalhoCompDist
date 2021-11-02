@@ -5,6 +5,7 @@ using System.Web.Http;
 using TrabalhoCompDist.Interfaces.Services;
 using TrabalhoCompDist.Arguments.Jogador;
 using Api.Controller.Base;
+using Infra.Transacao;
 
 namespace Api.Controller
 { 

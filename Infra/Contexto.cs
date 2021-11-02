@@ -2,8 +2,7 @@
 using System.Data.Entity.ModelConfiguration.Conventions;
 using TrabalhoCompDist.Entities;
 
-
-namespace Infraestrutura.Persistencia
+namespace Infra
 {
     public class Contexto : DbContext
     {
