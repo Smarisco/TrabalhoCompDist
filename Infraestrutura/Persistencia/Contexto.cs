@@ -5,9 +5,9 @@ using TrabalhoCompDist.Entities;
 
 namespace Infraestrutura.Persistencia
 {
-    public class Contexto: DbContext
+    public class Contexto : DbContext
     {
-        public Contexto():base("ConnectingSting")
+        public Contexto() : base("ConnectingSting")
         {
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
@@ -15,6 +15,9 @@ namespace Infraestrutura.Persistencia
         }
         public IDbSet<Jogador> Jogadores { get; set; }
         public IDbSet<Plataforma> Plataformas { get; set; }
+        public IDbSet<Jogos> Jogos { get; set; }
+        public IDbSet<ControleDeJogos> ControleDeJogos { get; set; }
+        public IDbSet<JogoDaPlataforma> JogosDaPlataforma { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -29,7 +32,7 @@ namespace Infraestrutura.Persistencia
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
             //Setar para usar varchar ou invés de nvarchar
-            modelBuilder.Properties<string>().Configure(p=>p.HasColumnType("varchar"));
+            modelBuilder.Properties<string>().Configure(p => p.HasColumnType("varchar"));
 
             modelBuilder.Properties<string>().Configure(p => p.HasMaxLength(100));
 

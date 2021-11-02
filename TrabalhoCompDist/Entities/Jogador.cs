@@ -4,10 +4,11 @@ using TrabalhoCompDist.ValueObjects;
 using prmToolkit.NotificationPattern;
 using crabalhoCompDist.Extensões;
 using TrabalhoCompDist.Recursos;
+using TrabalhoCompDist.Entities.Base;
 
 namespace TrabalhoCompDist.Entities
 {
-    public class Jogador : Notifiable
+    public class Jogador : EntidadeBase
     {
         public Jogador()
         {

@@ -39,7 +39,7 @@ namespace TrabalhoCompDist.Services
                 return null;
             }
 
-            jogador = _repositoryJogador.AdicionarJogador(jogador);
+            jogador = _repositoryJogador.Adicionar(jogador);
 
             return (AdicionarJogadorResponse)jogador;
         }
@@ -52,7 +52,7 @@ namespace TrabalhoCompDist.Services
             }
 
             //trazer informações do banco de dados
-            Jogador jogador = _repositoryJogador.ObterJogadorPorId(request.Id);
+            Jogador jogador = _repositoryJogador.ObterPorId(request.Id);
             if (jogador == null)
             {
                 AddNotification("Id", Mensagens.DADOS_NAO_ENCONTRADOS);
@@ -70,9 +70,7 @@ namespace TrabalhoCompDist.Services
             {
                 return null;
             }
-
-             _repositoryJogador.AlterarJogador(jogador);
-            
+                     
             return (AlterarJogadorResponse)jogador;
         }
 
@@ -94,14 +92,14 @@ namespace TrabalhoCompDist.Services
                 return null;
             }
 
-            //_repositoryJogador.ObterPor(x => x.Email.Endereco == jogador.Email.Endereco && x.Senha == jogador.Senha);
+            _repositoryJogador.ObterPor(x => x.Email.Endereco == jogador.Email.Endereco && x.Senha == jogador.Senha);
 
             return (AutenticarJogadorResponse)jogador;
 
         }
         public IEnumerable<JogadorResponse> ListarJogador()
         {
-            return _repositoryJogador.ListarJogador().ToList().Select(jogador => (JogadorResponse)jogador).ToList();
+            return _repositoryJogador.Listar().Select(jogador => (JogadorResponse)jogador).ToList();
         }
 
     }
