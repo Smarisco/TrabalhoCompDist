@@ -18,3 +18,10 @@ Selecione a guia Componentes individuais e, em seguida, role para baixo até a c
 Selecione Designer de Classe e, em seguida, selecione Modificar.
 
 O componente do Designer de Classe inicia a instalação.
+
+
+
+
+Para Criar o Banco o comando no console deve ser:
+
+Add-Migration CriandoBanco 
