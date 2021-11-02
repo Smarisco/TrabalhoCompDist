@@ -6,6 +6,7 @@ using TrabalhoCompDist.Interfaces.Services;
 using TrabalhoCompDist.Services;
 using Unity;
 using Unity.Lifetime;
+using Infraestrutura.Persistencia.Repositorio;
 
 namespace InversaoDeControle.Unity
 {

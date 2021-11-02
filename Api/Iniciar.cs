@@ -21,7 +21,7 @@ namespace Api
             HttpConfiguration config = new HttpConfiguration();
 
             // Swagger
-            //SwaggerConfig.Register(config);
+           // SwaggerConfig.Register(config);
 
             // Configure Injeção de dependência
             var container = new UnityContainer();
