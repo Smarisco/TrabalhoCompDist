@@ -1,13 +1,14 @@
-﻿using Microsoft.Owin;
+﻿using Abp.Authorization;
+using Microsoft.AspNet.WebApi.Extensions.Compression.Server;
+using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Owin;
 using System;
+using System.Net.Http.Extensions.Compression.Core.Compressors;
 using System.Web.Http;
 using Unity;
-using Unity.Lifetime;
-using InversaoDeControle.Unity;
 
 namespace Api
 {
@@ -22,8 +23,8 @@ namespace Api
 
             // Configure Injeção de dependência
             var container = new UnityContainer();
-            Dependencia(container);
-            config.Dependencia = new Resolver(container);
+            DependenciaResolver.Resolve(container);
+            config.DependencyResolver = new Resolver(container);
 
             ConfigureWebApi(config);
             ConfigureOAuth(app, container);

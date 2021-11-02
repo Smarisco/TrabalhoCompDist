@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web.Http.Dependencies;
 using Unity;
 
 namespace InversaoDeControle.Unity
 {
-    class Resolver
+    class Resolver : IDependencyResolver
     {
         protected IUnityContainer container;
 
@@ -42,15 +43,14 @@ namespace InversaoDeControle.Unity
             }
         }
 
-        //public IDependencyScope BeginScope()
-        //{
-        //    var child = container.CreateChildContainer();
-        //    return new Resolver(child);
-        //}
-
         public void Dispose()
         {
             container.Dispose();
+        }
+
+        public IDependencyScope BeginScope()
+        {
+            throw new NotImplementedException();
         }
     }
 }
