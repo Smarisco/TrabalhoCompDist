@@ -25,3 +25,9 @@ O componente do Designer de Classe inicia a instalação.
 Para Criar o Banco o comando no console deve ser:
 
 Add-Migration CriandoBanco 
+
+
+Pacotes a serem instalados:
+Unity;
+EntityFramework;
+prmToolkit.NotificationPattern (para validação de menssagens);
