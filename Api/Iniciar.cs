@@ -10,6 +10,7 @@ using System.Net.Http.Extensions.Compression.Core.Compressors;
 using System.Web.Http;
 using Unity;
 using Api.Security;
+using InversaoDeControle.Unity;
 
 namespace Api
 {
@@ -25,7 +26,7 @@ namespace Api
             // Configure Injeção de dependência
             var container = new UnityContainer();
             DependenciaResolver.Resolve(container);
-            config.DependencyResolver = new Resolver(container);
+            config.DependencyResolver = new DependenciaResolver(container);
 
             ConfigureWebApi(config);
             ConfigureOAuth(app, container);

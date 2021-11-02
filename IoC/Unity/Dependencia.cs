@@ -1,7 +1,11 @@
-﻿using System.Data.Entity;
+﻿using prmToolkit.NotificationPattern;
+using System.Data.Entity;
+using TrabalhoCompDist.Interfaces.Repositories;
+using TrabalhoCompDist.Interfaces.Repositories.Base;
+using TrabalhoCompDist.Interfaces.Services;
+using TrabalhoCompDist.Services;
 using Unity;
 using Unity.Lifetime;
-using Infraestrutura.Transacao;
 
 namespace InversaoDeControle.Unity
 {

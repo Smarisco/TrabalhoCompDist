@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using TrabalhoCompDist.Arguments.Jogador;
 using TrabalhoCompDist.Interfaces.Services;
 using Unity;
-using System.Linq;
 
 
 namespace Api.Security

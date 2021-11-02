@@ -229,6 +229,7 @@
     <Compile Include="Interfaces\Repositories\IRepositoryJogoDaPlataforma.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryPlataforma.cs" />
     <Compile Include="Interfaces\Repositories\IServiceControleDeJogos.cs" />
+    <Compile Include="Interfaces\Services\Base\IServiceBase.cs" />
     <Compile Include="Interfaces\Services\IServiceJogador.cs" />
     <Compile Include="Interfaces\Services\IServiceJogo.cs" />
     <Compile Include="Interfaces\Services\IServiceJogoDaPlataforma.cs" />

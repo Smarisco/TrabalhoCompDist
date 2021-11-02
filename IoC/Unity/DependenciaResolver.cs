@@ -13,8 +13,12 @@ using Unity.Lifetime;
 
 namespace InversaoDeControle.Unity
 {
-    public static class DependenciaResolver 
+    public  class DependenciaResolver 
     {
+        public DependenciaResolver()
+        {
+
+        }
         public static void Resolve(UnityContainer container)
         {
             

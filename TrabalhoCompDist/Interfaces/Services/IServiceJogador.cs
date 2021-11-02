@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using TrabalhoCompDist.Arguments.Base;
 using TrabalhoCompDist.Arguments.Jogador;
-
+using TrabalhoCompDist.Interfaces.Services.Base;
 
 namespace TrabalhoCompDist.Interfaces.Services
 {
-    public interface IServiceJogador
+    public interface IServiceJogador: IServiceBase
     {
         AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request);
         AdicionarJogadorResponse AdicionarJogador(AdicionaJogadorRequest request);

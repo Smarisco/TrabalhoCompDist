@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TrabalhoCompDist.Interfaces.Services.Base;
 
 namespace TrabalhoCompDist.Interfaces.Services
 {
-    public interface IServiceJogoDaPlataforma
+    public interface IServiceJogoDaPlataforma : IServiceBase
     {
     }
 }

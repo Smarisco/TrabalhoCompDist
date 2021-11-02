@@ -1,16 +1,15 @@
-﻿using System;
+﻿using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using TrabalhoCompDist.Arguments.Base;
 using TrabalhoCompDist.Arguments.Jogador;
 using TrabalhoCompDist.Entities;
 using TrabalhoCompDist.Interfaces.Repositories;
 using TrabalhoCompDist.Interfaces.Services;
-using TrabalhoCompDist.ValueObjects;
-using prmToolkit.NotificationPattern;
-using prmToolkit.NotificationPattern.Extensions;
 using TrabalhoCompDist.Recursos;
-using System.Collections.Generic;
-using System.Linq;
-using prmToolkit.NotificationPattern.Resources;
-using TrabalhoCompDist.Arguments.Base;
+using TrabalhoCompDist.ValueObjects;
 
 namespace TrabalhoCompDist.Services
 {
