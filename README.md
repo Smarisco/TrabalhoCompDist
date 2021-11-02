@@ -36,4 +36,14 @@ Microsoft.Owin.Host.System.Web;
 Microsoft.Owin.Security.OAuth (para criar token);
 Microsoft.Owin.Cors (Permissão de Acesso);
 
+---
 
+Dentro da pasta Jogador, por ter Classes diferentes de Request e Response para adicionar, alterar e autenticar, o sistema conta com uma melhor rastreabilidade
+
+Não utilizamos entidades/classes anêmicas.
+As classes não são apenas um DTO por onde trafegam informações
+
+As regras de negócio, como por exemplo, o tamanho mínimo e máximo que deve ter uma senha, estão dentro das entidades/classes.
+As próprias classes se validam.
+
+Além disso, as classes tem seu set como privados para aumentar a segurança da aplicação
