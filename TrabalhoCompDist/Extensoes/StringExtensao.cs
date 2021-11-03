@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace crabalhoCompDist.Extensões
+namespace TrabalhoCompDist.Extensoes
 {
     public static class StringExtensao
     {

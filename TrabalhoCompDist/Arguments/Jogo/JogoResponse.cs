@@ -1,9 +1,10 @@
 ﻿using System;
 using TrabalhoCompDist.Entities;
+using TrabalhoCompDist.Interfaces.Dto;
 
 namespace TrabalhoCompDist.Arguments.Jogo
 {
-    public class JogoResponse
+    public class JogoResponse : IResponse
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }

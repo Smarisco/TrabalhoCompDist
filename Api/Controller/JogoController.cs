@@ -1,4 +1,5 @@
-﻿using Infra.Transacao;
+﻿using Api.Controller.Base;
+using Infra.Transacao;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using TrabalhoCompDist.Interfaces.Services;
 namespace Api.Controller
 {
     [RoutePrefix("api/jogo")]
-    public class JogoController
+    public class JogoController : ControllerBase
     {
         private readonly IServiceJogo _serviceJogo;
 

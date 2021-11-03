@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrabalhoCompDist.Interfaces.Dto;
 
 namespace TrabalhoCompDist.Arguments.Jogo
 {
-    public class AlterarJogoResquest
+    public class AlterarJogoResquest : IRequest
     {
         public Guid Id { get; set; }
 

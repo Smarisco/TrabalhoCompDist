@@ -1,4 +1,6 @@
-﻿namespace TrabalhoCompDist.Arguments.Jogo
+﻿using TrabalhoCompDist.Interfaces.Dto;
+
+namespace TrabalhoCompDist.Arguments.Jogo
 {
     public class AdicionarJogoRequest
     {
