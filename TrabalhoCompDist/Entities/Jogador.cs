@@ -50,7 +50,7 @@ namespace TrabalhoCompDist.Entities
             AddNotifications(nome, email);
         }
 
-        public Guid Id { get; private set; }
+        public Guid ID { get; private set; }
         public Nome Nome { get; private set; }
         public Email Email { get; private set; }
         public string Senha { get; private set; }
