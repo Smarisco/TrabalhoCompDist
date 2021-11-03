@@ -62,7 +62,7 @@ namespace TrabalhoCompDist.Services
 
             if (jogo == null)
             {
-                AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
+                AddNotification("Id", Mensagens.DADOS_NAO_ENCONTRADOS);
                 return null;
             }
 
@@ -84,13 +84,13 @@ namespace TrabalhoCompDist.Services
 
             if (jogo == null)
             {
-                AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
+                AddNotification("Id", Mensagens.DADOS_NAO_ENCONTRADOS);
                 return null;
             }
 
             _repositoryJogo.Remover(jogo);
 
-            return new ResponseBase() { Message = Message.OPERACAO_REALIZADA_COM_SUCESSO };
+            return new ResponseBase() { Mensagem = Mensagens.OPERACAO_REALIZADA_COM_SUCESSO };
         }
 
         public IEnumerable<JogoResponse> ListarJogo()

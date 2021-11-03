@@ -1,10 +1,10 @@
-﻿using System;
-using TrabalhoCompDist.Enum;
-using TrabalhoCompDist.ValueObjects;
-using prmToolkit.NotificationPattern;
-using crabalhoCompDist.Extensões;
-using TrabalhoCompDist.Recursos;
+﻿using prmToolkit.NotificationPattern;
+using System;
 using TrabalhoCompDist.Entities.Base;
+using TrabalhoCompDist.Enum;
+using TrabalhoCompDist.Extensoes;
+using TrabalhoCompDist.Recursos;
+using TrabalhoCompDist.ValueObjects;
 
 namespace TrabalhoCompDist.Entities
 {

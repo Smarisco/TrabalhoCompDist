@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Infra.Persistencia;
 namespace Infra.Transacao
 {
-    class UnityTrabalho : IUnityTrabalho
+    public class UnityTrabalho : IUnityTrabalho
     {
         private readonly Contexto _context;
         public UnityTrabalho(Contexto context)

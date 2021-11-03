@@ -1,6 +1,5 @@
 ﻿using Infra.Repositorio.Base;
 using System;
-using System.Guid;
 using TrabalhoCompDist.Entities;
 using TrabalhoCompDist.Interfaces.Repositories;
 

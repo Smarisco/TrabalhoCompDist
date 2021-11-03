@@ -37,7 +37,7 @@ namespace Api.Controller
 
         [Route("Alterar")]
         [HttpPut]
-        public async Task<HttpResponseMessage> Alterar(AlterarJogoRequest request)
+        public async Task<HttpResponseMessage> Alterar(AlterarJogoResquest request)
         {
             try
             {

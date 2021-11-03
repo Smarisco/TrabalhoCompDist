@@ -13,7 +13,7 @@ namespace TrabalhoCompDist.Arguments.Base
         {
             return new ResponseBase()
             {
-                Message = Mensagens.OPERACAO_REALIZADA_COM_SUCESSO
+                Mensagem = Mensagens.OPERACAO_REALIZADA_COM_SUCESSO
             };
         }
     }

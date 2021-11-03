@@ -1,4 +1,8 @@
-﻿using prmToolkit.NotificationPattern;
+﻿using Infra;
+using Infra.Persistencia.Repositorio;
+using Infra.Repositorio.Base;
+using Infra.Transacao;
+using prmToolkit.NotificationPattern;
 using System.Data.Entity;
 using TrabalhoCompDist.Interfaces.Repositories;
 using TrabalhoCompDist.Interfaces.Repositories.Base;
