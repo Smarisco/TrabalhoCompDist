@@ -27,7 +27,7 @@ namespace TrabalhoCompDist.Entities
             Nome = nome;
             Email = email;
             Senha = senha;
-            Id = Guid.NewGuid();
+            ID = Guid.NewGuid();
             Status = EnumStatusJogador.EmAnalise;
 
             new AddNotifications<Jogador>(this)
